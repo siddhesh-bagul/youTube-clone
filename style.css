@@ -17,7 +17,7 @@
 #checkbox{
     display: none;
 }
-#bars{
+.fa-bars{
     align-self: center;
     font-size: 25px;
     transition: 0.2s;
@@ -30,7 +30,7 @@
 }
 .hero{
     overflow: auto;
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     left: -350px;
     top: 0;
@@ -43,6 +43,9 @@
     transition-duration: 0.5s;
 }
 #checkbox:checked ~ .hero{
+    left: 0;
+}
+.leftzero{
     left: 0;
 }
 .hero::-webkit-scrollbar{
@@ -225,7 +228,9 @@
     align-items: center;
     border: 2px solid #fff;
     border-radius: 82px;
-
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
 }
 .fa-circle-user{
     color: #fff;
@@ -246,6 +251,9 @@
     align-items: center;
     overflow: auto;
 }
+.topbar-bottom::-webkit-scrollbar{
+        display: none;
+}
 .btn-tag{
     border: none;
     border-radius: 5px;
@@ -253,6 +261,9 @@
     font-size: 15px;
     margin: 5px;
     padding: 5px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible
 }
 .bg-white{
     background-color: #ffffff;
@@ -408,7 +419,7 @@
         overflow: visible
     }
     .topbar-bottom::-webkit-scrollbar{
-        height: 5px;
+        display: none;
     }
     .video-row{
         display: flex;
@@ -451,9 +462,14 @@
         border: none;
     }
 
-
+    .displayYes{
+        display: inline-block;
+    }
     .side-bar{
         display: none;
+    }
+    .hero{
+        display: inline-block;
     }
     .top-bar{
         margin: 0;
